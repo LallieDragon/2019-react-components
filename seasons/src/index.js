@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 //Geolocation API developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
 
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 class App extends React.Component {
   // constructor(props) {
@@ -14,7 +15,7 @@ class App extends React.Component {
   //   };
   // }
 
-  //Line 18 is a complete and equivalent way of doing linkes 8-15
+  //Line 19 is a complete and equivalent way of doing linkes 8-15
   state = { lat: null, errorMessage: ''}
 
   componentDidMount = () => {
@@ -37,7 +38,7 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />
     }
 
-    return <div>Loading...</div>
+    return <Spinner />
   }
 };
 
