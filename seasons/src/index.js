@@ -34,10 +34,11 @@ class App extends React.Component {
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <div>Latitude: {this.state.lat}</div>
+      return <SeasonDisplay lat={this.state.lat} />
     }
 
     return <div>Loading...</div>
   }
-}
+};
+
 ReactDOM.render(<App />, document.querySelector('#root'))
